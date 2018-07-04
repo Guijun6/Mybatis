@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--配置Mybatis属性文件信息-->
+    <properties resource="config/database.properties">
+    </properties>
+
+    <!--配置别名-->
+    <typeAliases>
+        <!--<package name="com.jason.mybatis.mapper"/>-->
+        <package name="com.jason.mybatis.entity"/>
+        <!--<typeAlias alias="MemoGroup" type="com.jason.mybatis.entity.MemoGroup"/>-->
+    </typeAliases>
+
+    <environments default="dev">
+        <environment id="dev">
+            <transactionManager type="JDBC">
+            </transactionManager>
+            <dataSource type="POOLED">
+                <property name = "driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--映射文件配置信息-->
+    <mappers>
+        <mapper resource="mapper/MemoGroupMapper.xml"/>
+    </mappers>
+
+</configuration>
