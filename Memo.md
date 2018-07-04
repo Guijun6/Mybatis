@@ -29,7 +29,7 @@ Mybatis实例
 	3.4 编码，创建SqlSessionFactory SqlSession Mapper Interface
 	3.5 测试一下代码
 
-问题：
+注意一般存在的问题问题：
 
 	1.容易拼写错误
 	2.文件夹，包名称，类名称
